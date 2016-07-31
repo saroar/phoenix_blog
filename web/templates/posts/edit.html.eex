@@ -1,0 +1,12 @@
+<%= form_for @conn, post_path(@conn, :update, @post), [name: :post, method: :put], fn form -> %>
+  <div class="form-group">
+    <%= label(form, :title, "Title") %>
+    <%= text_input(form, :title, value: @post.title, class: "form-control") %>
+  </div>
+
+  <div class="form-group">
+    <%= label(form, :content, "Content") %>
+    <%= text_input(form, :content, value: @post.content, class: "form-control") %>
+  </div>
+  <%= submit "Save", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,13 @@
+<a href="/posts"> Back to posts </a>
+
+<h1><%= @post.title %></h1>
+
+<%= link to: post_path(@conn, :edit, @post) do %>
+  Edit
+<% end %>
+
+<%= link "Delete", to: post_path(@conn, :delete, @post), method: :delete %>
+
+<p>
+  <%= @post.content %>
+</p>
